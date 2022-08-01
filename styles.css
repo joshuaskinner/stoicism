@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-image: url(imgs/pillar.png), url(imgs/pillar.png); 
+  background-position: left top 20vw, right top 20vw;
+  background-repeat: repeat-y, repeat-y;
+  background-color: #bcbcc2;
+  background-blend-mode: multiply;
+  background-size: 15% auto;
+  font-family: 'Mulish', sans-serif;
+}
+
+header {
+  color: white;
+  display: grid;
+  height: 20vw;
+  padding: 5vw;
+  background: url("imgs/marcus-bg.jpg") center / cover no-repeat #5c5f8a;
+  background-blend-mode: multiply;
+  box-shadow: 0 0 30px 5px black;
+  position: relative;
+  z-index: 100;
+}
+
+h1, h4 {
+  text-shadow: 2px 2px 2px #000;
+}
+
+h2, h3 {
+  text-shadow: 2px 2px 2px grey;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant SC', serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 8vw;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 5.5vw;
+  margin-top: 2vw;
+  margin-bottom: 1.5vw;
+}
+
+h3 {
+  font-size: 3.5vw;
+  margin-top: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+h4 {
+  font-size: 2vw;
+  align-self: end;
+}
+
+blockquote, cite {
+  padding: 0.5vw 1.5vw;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 2vw;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.7vw;
+  padding: 1.5vw 1vw;
+  overflow-wrap: break-word;
+}
+
+section {
+  padding: 2% 0;
+  margin: 1% 15%;
+  border-bottom: 3px solid #444;
+  border-top: 3px solid #444;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat (4 auto 1fr);
+  grid-template-areas: 
+    "head"
+    "main";
+}
+
+.head {
+  grid-area: head;
+  align-self: center;
+  justify-self: center;  
+}
+
+.main {
+  grid-area: main;
+  padding: 0 5vw 3vw; 
+}
+
+footer a, footer p {
+  font-family: 'Cormorant SC', serif;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 0 1% 0;
+  text-shadow: 1px 0 #444;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* images start here */
+
+img {
+  display: block;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px #333
+}
+
+img.marcus {
+  width: 30%;
+  float: right;
+  margin: 15px 1% 15px 15px;
+}
+
+img.seneca {
+  width: 40%;
+  float: left;
+  margin: 15px 25px 15px 1%;
+}
+
+img.epictetus {
+  width: 80%;
+  margin: 15px auto;
+}
+
+img.stoa {
+  width: 80%;
+  margin: 15px auto;
+}
+
+/* media queries start here */
+
+@media only screen and (max-width: 375px){
+  p, blockquote, cite {
+    font-size: 3.5vw;
+  }
+  section {
+    margin: 1% 0;
+    border-bottom: 2px solid #444;
+    border-top: 2px solid #444;
+  }
+  body {
+    background-image: none;
+  }
+  h3 {
+    font-size: 4.5vw;
+  }
+  header {
+    height: 35vw;
+  }
+  h1 {
+    font-size: 12vw;
+  }
+  h4 {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width:600px){
+p, blockquote, cite {
+    font-size: 2.2vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width:999px){
+p, blockquote, cite {
+    font-size: 1.7vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width:1440px){
+ p, blockquote, cite {
+    font-size: 1.3vw;
+  }
+}
+
